@@ -1,0 +1,833 @@
+@import 'variables/fonts'
+@import 'variables/color'
+
+*
+  padding: 0
+  margin: 0
+
+body
+  min-width: 240px
+  background-color: #fff
+  font-family: $font-body
+  line-height: 1.2
+  color: $primary
+
+  //margin-top: 105px
+  //
+  //@media only screen and (max-width: 1680px)
+  //  margin-top: 79px
+  //
+  //@media only screen and (max-width: 767px)
+  //  margin-top: 68px
+
+main
+  display: block
+
+h1,h2,h3,h4,h5,h6
+  overflow-wrap: break-word
+  font-family: $font-title
+
+p
+  overflow-wrap: break-word
+  margin: 0
+
+address
+  font-style: normal
+
+input,
+textarea
+  border: solid 0 transparent
+  outline: 0
+
+input, select, textarea
+  font-size: 16px
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  display: none
+
+button
+  border: 0
+  background-color: transparent
+  cursor: pointer
+
+.container
+  box-sizing: border-box
+  max-width: 1450px
+  margin-left: auto
+  margin-right: auto
+
+  @media only screen and (max-width: 1680px)
+    width: 95%
+    padding-left: 20px
+    padding-right: 20px
+
+  @media only screen and (max-width: 1199px)
+    width: 100%
+    padding-left: 20px
+    padding-right: 20px
+
+  @media only screen and (max-width: 767px)
+    padding-left: 10px
+    padding-right: 10px
+
+.row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.sr-only
+  position: absolute
+  width: 0
+  height: 0
+  padding: 0
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  white-space: nowrap
+  clip-path: inset(50%)
+  border: 0
+
+
+.landing
+  overflow: hidden
+
+  &_main
+    background: linear-gradient(165deg, #98B9D9 15.6%, rgba(170, 200, 227, 0) 61.6%)
+
+    & > div
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: center
+      padding-top: 110px
+      padding-bottom: 110px
+
+    &_body
+      width: 48%
+
+      @media only screen and (max-width: 1080px)
+        width: 100%
+        padding-left: 10%
+        padding-right: 10%
+
+      @media only screen and (max-width: 640px)
+        padding-left: 5%
+        padding-right: 5%
+        margin-bottom: 40px
+
+
+      & > span
+        display: block
+        font-weight: 100
+        font-size: 18px
+        letter-spacing: 0.89em
+        margin-bottom: 10px
+        text-transform: uppercase
+
+        @media only screen and (max-width: 1080px)
+          text-align: center
+
+        @media only screen and (max-width: 640px)
+          font-size: 16px
+
+      & > h1
+        font-family: $font-title
+        font-weight: 400
+        font-size: 104px
+        line-height: 1
+        margin-bottom: 30px
+
+        @media only screen and (max-width: 1080px)
+          text-align: center
+
+        @media only screen and (max-width: 640px)
+          font-size: 40px
+
+      & > p
+        font-weight: 300
+        font-size: 22px
+        letter-spacing: 0.03em
+
+        @media only screen and (max-width: 1080px)
+          text-align: center
+
+        @media only screen and (max-width: 640px)
+          font-size: 16px
+
+    &_image
+      width: 48%
+
+      @media only screen and (max-width: 1080px)
+        width: 80%
+        margin-left: auto
+        margin-right: auto
+
+
+  &_experts
+    margin-bottom: 140px
+
+    @media only screen and (max-width: 640px)
+      margin-bottom: 70px
+
+    &_row
+      justify-content: space-around
+
+    & > h2
+      font-style: italic
+      font-weight: 400
+      font-size: 75px
+      text-align: center
+      margin-bottom: 70px
+
+      @media only screen and (max-width: 1080px)
+        font-size: 60px
+
+      @media only screen and (max-width: 640px)
+        font-size: 40px
+
+
+
+  &_expert
+    text-align: center
+    width: 20%
+    //width: 266px
+
+    @media only screen and (max-width: 1080px)
+      width: 45%
+
+      &:nth-child(n+3)
+        margin-top: 80px
+
+    @media only screen and (max-width: 640px)
+      width: 100%
+
+      &:nth-child(n+2)
+        margin-top: 40px
+
+    &_image
+      position: relative
+      width: 80%
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 40px
+
+      &::before
+        position: absolute
+        display: block
+        content: ''
+        background-size: cover
+        background-repeat: no-repeat
+        z-index: -1
+
+      &.boha::before
+        left: -20%
+        bottom: -10%
+        width: 58%
+        padding-top: 53%
+        background-image: url('../images/expert-boha_bg.webp')
+
+      &.ushakova::before
+        left: -74%
+        bottom: -19%
+        width: 247%
+        padding-top: 153%
+        background-image: url('../images/expert-ushakova_bg.webp')
+
+      &.ziryanov::before
+        left: -37%
+        bottom: -18%
+        width: 253%
+        padding-top: 142%
+        background-image: url('../images/expert-ziryanov_bg.webp')
+
+      &.muromceva::before
+        left: 69%
+        bottom: 17%
+        width: 58%
+        padding-top: 53%
+        background-image: url('../images/expert-muromceva_bg.webp')
+
+
+      & > img
+        display: block
+        width: 100%
+        height: auto
+        overflow: hidden
+        border-radius: 50%
+
+    &:nth-child(1) > h3
+      color: #92b3d3
+
+    &:nth-child(2) > h3
+      color: #eb8c7c
+
+    &:nth-child(3) > h3
+      color: #bcd196
+
+    &:nth-child(4) > h3
+      color: #e8d3c3
+
+    &_title
+      font-family: $font-body
+      font-weight: 700
+      font-size: 18px
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      margin-bottom: 15px
+
+
+    &_description
+      font-weight: 300
+      font-size: 15px
+      line-height: 18px
+      letter-spacing: 0.03em
+
+  &_pentagram
+    position: relative
+    height: 950px
+    margin-bottom: 70px
+
+    @media only screen and (max-width: 1525px)
+      height: auto
+
+    @media only screen and (max-width: 640px)
+
+      margin-bottom: 40px
+
+    &_wrapper
+      @media only screen and (max-width: 1525px)
+        position: relative
+        width: 100%
+        //border: 1px solid black
+        padding-top: 100%
+
+    & > .row
+      //display: none
+
+      @media only screen and (max-width: 1525px)
+        display: flex
+        justify-content: space-around
+
+
+    &_first
+      position: absolute
+      top: 0
+      left: 29%
+      width: 305px
+      z-index: 1
+
+      @media only screen and (max-width: 1525px)
+        top: 0
+        left: 15%
+        width: 35%
+
+
+      & > img
+        position: relative
+        display: block
+        width: 100%
+        //background: black
+        clip-path: polygon(70% 9%, 92% 26%, 92% 97%, 5% 74%, 21% 1%)
+
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 33%
+        left: 23%
+        border-radius: 50%
+        width: 70%
+        padding-top: 70%
+        background-color: #98B9D9
+        filter: blur(64px)
+        z-index: -1
+
+    &_second
+      position: absolute
+      top: 37px
+      left: 49%
+      width: 297px
+      //background: black
+
+      @media only screen and (max-width: 1525px)
+        top: 3.5%
+        left: 49%
+        width: 35%
+
+
+      & > img
+        position: relative
+        display: block
+        width: 100%
+        clip-path: polygon(83% 0, 100% 37%, 96% 71%, 5% 95%, 1% 0)
+        z-index: 1
+
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 27%
+        left: 6%
+        border-radius: 50%
+        width: 70%
+        padding-top: 70%
+        background-color: #F6DED1
+        filter: blur(64px)
+        z-index: -1
+
+    &_third
+      position: absolute
+      top: 244px
+      left: 51%
+      width: 453px
+
+      @media only screen and (max-width: 1525px)
+        top: 28.5%
+        left: 52%
+        width: 52.8%
+
+
+
+      & > img
+        display: block
+        width: 100%
+        //background: black
+        clip-path: polygon(69% 10%, 92% 27%, 96% 63%, 41% 99%, 0 39%)
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 26%
+        left: 15%
+        border-radius: 50%
+        width: 49%
+        padding-top: 49%
+        background-color: #D2ECF8
+        filter: blur(64px)
+        z-index: -1
+
+    &_fourth
+      position: absolute
+      top: 407px
+      left: 36%
+      width: 437px
+
+      @media only screen and (max-width: 1525px)
+        top: 49%
+        left: 28%
+        width: 47.2%
+
+
+      & > img
+        display: block
+        width: 100%
+        //background: #000
+        clip-path: polygon(44% 4%, 58% 10%, 75% 27%, 85% 56%, 77% 76%, 55% 83%, 34% 83%, 22% 74%, 3% 57%, 13% 23%)
+
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 19%
+        left: 15%
+        border-radius: 50%
+        width: 60%
+        padding-top: 60%
+        background-color: #EB8C7C
+        filter: blur(64px)
+        z-index: -1
+
+    &_fifth
+      position: absolute
+      top: 249px
+      left: 20.5%
+      width: 403px
+
+      @media only screen and (max-width: 1525px)
+        top: 29.6%
+        left: 0
+        width: 46.2%
+
+      & > img
+        display: block
+        width: 100%
+        //background-color: black
+        clip-path: polygon(56% 14%, 99% 34%, 61% 95%, 17% 83%, 14% 26%)
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 24%
+        left: 22%
+        border-radius: 50%
+        width: 60%
+        padding-top: 60%
+        background-color: #C6DBA0
+        filter: blur(64px)
+        z-index: -1
+
+    &_image
+      cursor: pointer
+      transition: transform .5s ease-out
+
+      &:hover
+        transform: scale(1.2)
+
+
+    &_description
+      position: absolute
+      width: 250px
+      margin-bottom: 70px
+
+      @media only screen and (max-width: 1525px)
+        position: relative
+        width: 30%
+
+      @media only screen and (max-width: 640px)
+        width: 100%
+        margin-bottom: 40px
+
+        &:last-child
+          margin-bottom: 0
+
+      &.briz
+        @media only screen and (min-width: 1525px)
+          top: 0
+          left: 0
+
+      &.detskiy
+        @media only screen and (min-width: 1525px)
+          top: 0
+          right: 0
+
+      &.pion
+        @media only screen and (min-width: 1525px)
+          top: 500px
+          left: 0
+
+      &.ice
+        @media only screen and (min-width: 1525px)
+          top: 500px
+          right: 0
+
+      &.roza
+        @media only screen and (min-width: 1525px)
+          top: 890px
+          right: calc(50% - 125px)
+
+      & > h2
+        font-family: $font-body
+        font-weight: 700
+        font-size: 17px
+        text-align: center
+        margin-bottom: 15px
+
+        & > span
+          display: block
+
+        &.briz
+          color: #92B3D3
+
+        &.pion
+          color: #BCD196
+
+        &.ice
+          color: #BBD6E3
+
+        &.detskiy
+          color: #E8D3C3
+
+        &.roza
+          color: #EB8C7C
+
+      & > p
+        cursor: pointer
+        font-weight: 300
+        font-size: 16px
+        text-align: center
+        letter-spacing: 0.03em
+
+
+
+  &_interview
+    margin-bottom: 140px
+
+    &_article
+      width: 80%
+      margin-left: auto
+      margin-right: auto
+
+      @media only screen and (max-width: 640px)
+        width: 100%
+
+      &_bg
+        display: none
+        background-repeat: no-repeat
+        background-size: 20%
+        background-position: left 0 bottom 350px, right 0 top 300px
+
+        &.active
+          display: block
+
+        @media only screen and (max-width: 640px)
+          background-position: left 0 bottom 1300px, right 0 top 300px
+
+        &.briz
+          background-image: url('../images/bg_briz1.webp'), url('../images/bg_briz2.webp')
+
+        &.detskiy
+          background-image: url('../images/bg_detsk1.webp'), url('../images/bg_detsk2.webp')
+
+        &.rose
+          background-image: url('../images/bg_rose1.webp'), url('../images/bg_rose2.webp')
+
+        &.pion
+          background-image: url('../images/bg_pion1.webp'), url('../images/bg_pion2.webp')
+
+
+      & > img
+        display: block
+        max-width: 100%
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 25px
+
+    &_title
+      font-style: italic
+      font-weight: normal
+      font-size: 75px
+      text-align: center
+      margin-bottom: 15px
+
+      @media only screen and (max-width: 1080px)
+        font-size: 65px
+
+      @media only screen and (max-width: 640px)
+        font-size: 35px
+
+
+
+    &_description
+      font-style: normal
+      font-weight: 200
+      font-size: 23px
+      text-align: center
+      letter-spacing: 0.13em
+      text-transform: uppercase
+      margin-bottom: 40px
+
+      @media only screen and (max-width: 1080px)
+        font-size: 20px
+
+      @media only screen and (max-width: 640px)
+        font-size: 18px
+
+      & > span
+        display: block
+
+    &_blockquote
+      font-family: $font-title
+      font-style: italic
+      font-weight: normal
+      font-size: 46px
+      margin-bottom: 40px
+
+      @media only screen and (max-width: 1080px)
+        font-size: 35px
+
+      @media only screen and (max-width: 640px)
+        font-size: 20px
+
+      &.boha
+        color: #98B9D9
+
+      &.ushakova
+        color: #EB8C7C
+
+      &.ziryanov
+        color: #B9CE93
+
+      &.muromceva
+        color: #DCC7B7
+
+
+    &_text
+      font-weight: 100
+      font-size: 20px
+      letter-spacing: 0.03em
+      margin-bottom: 80px
+
+      @media only screen and (max-width: 1080px)
+        font-size: 18px
+
+      @media only screen and (max-width: 640px)
+        font-size: 16px
+
+      & p
+        &:nth-child(2n+1)
+          font-weight: 700
+
+        &:nth-child(2n+2)
+          margin-top: 25px
+
+        &:nth-child(2n+3)
+          margin-top: 50px
+
+      &.boha a
+          color: #98B9D9
+          font-weight: 700
+          text-decoration-style: dashed
+          margin-left: 5px
+          margin-right: 5px
+
+    &_collapse
+      padding-top: 25px
+      height: auto
+      max-height: 0
+      overflow: hidden
+      transition: max-height 1s ease-out
+
+      &.active
+        max-height: 1000px
+
+    &_btn
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 100px
+
+    &_photos
+      position: relative
+      display: flex
+      justify-content: flex-end
+      margin-bottom: 90px
+
+      @media only screen and (max-width: 1080px)
+        flex-wrap: wrap
+        justify-content: center
+
+
+    &_imagerow
+      position: absolute
+      display: flex
+      justify-content: space-between
+      top: 10%
+      left: 0
+      width: 55%
+      z-index: 1
+
+      @media only screen and (max-width: 1080px)
+        position: relative
+        width: 100%
+
+
+    &_image1
+      position: relative
+      display: block
+      width: 48.3%
+      padding-top: 74.2%
+
+      @media only screen and (max-width: 1080px)
+        width: 100%
+        margin-bottom: 40px
+        order: -1
+
+
+
+    &_image2
+      position: relative
+      width: 48.5%
+      padding-top: 108.4%
+      overflow: hidden
+
+
+      &:last-child
+        & > img:hover
+          transform: scale(1.1)
+
+
+
+    &_image1,
+    &_image2
+      & > img
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center top
+        transition: transform .5s ease-out
+
+
+    &_promo
+      text-align: center
+
+      & > .btn
+        margin-left: 16px
+        margin-right: 16px
+        margin-bottom: 17px
+
+
+
+  &_footer
+    background: linear-gradient(355deg, rgba(152,185,217,0.5) 0%, rgba(152,185,217,0) 69%)
+    padding-bottom: 40px
+
+    @media only screen and (max-width: 640px)
+      padding-bottom: 20px
+
+    & > .container > .row
+      justify-content: space-around
+
+    &_image
+      display: block
+      width: 18%
+      transition: transform .5s ease-out
+
+      &:hover
+        transform: scale(1.1)
+
+      & > img
+        display: block
+        width: 100%
+        height: auto
+
+      @media only screen and (max-width: 1080px)
+        width: 30%
+
+        &:nth-child(n+4)
+          margin-top: 80px
+
+      @media only screen and (max-width: 640px)
+        width: 90%
+
+        &:nth-child(n+2)
+          margin-top: 40px
+
+    &_logo
+      display: block
+      width: 100%
+      max-width: 200px
+      margin-left: auto
+      margin-right: auto
+
+      & > img
+        display: block
+        width: 100%
+        height: auto
+
+
+
+
+
+
+
+
+@import 'common/btn'

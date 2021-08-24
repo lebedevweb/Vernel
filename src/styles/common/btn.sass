@@ -1,0 +1,89 @@
+.btn
+  box-sizing: border-box
+  position: relative
+  display: inline-block
+  font-size: 14px
+  font-weight: 500
+  text-align: center
+  text-decoration: none
+  border: none
+  background-color: transparent
+  transition:
+    property: color, background-color, border, opacity, transform
+    timing-function: ease-out
+    duration: .4s
+  cursor: pointer
+
+  &:hover
+    opacity: .7
+
+
+  &_promo
+    color: white
+    font-weight: 700
+    font-size: 27px
+    line-height: 1
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    background: linear-gradient(94.93deg, #184590 4.02%, #0069AE 79.55%), #0069AE
+    border-radius: 14px
+    padding: 19px 26px
+
+    @media only screen and (max-width: 1080px)
+      font-size: 23px
+
+    @media only screen and (max-width: 1080px)
+      font-size: 18px
+
+  &_cyan
+    color: #0d0d0d
+    background-color: #D2ECF8
+    border-radius: 10px
+    font-weight: bold
+    font-size: 20px
+    letter-spacing: 0.17em
+    padding: 14px 34px
+    display: none
+
+    &.active
+      display: block
+
+  &_peach
+    color: #0d0d0d
+    background-color: #F6DED1
+    border-radius: 10px
+    font-weight: bold
+    font-size: 20px
+    letter-spacing: 0.17em
+    padding: 14px 34px
+    display: none
+
+    &.active
+      display: block
+
+  &_roze
+    color: #ffffff
+    background-color: #EB8C7C
+    border-radius: 10px
+    font-weight: bold
+    font-size: 20px
+    letter-spacing: 0.17em
+    padding: 14px 34px
+    display: none
+
+    &.active
+      display: block
+
+  &_pion
+    color: #0d0d0d
+    background-color: #C6DBA0
+    border-radius: 10px
+    font-weight: bold
+    font-size: 20px
+    letter-spacing: 0.17em
+    padding: 14px 34px
+    display: none
+
+    &.active
+      display: block
+
